@@ -10,6 +10,8 @@ import constant.AsterConstant;
  */
 public class Moon extends Planet{
 	
+	public Moon(){}
+	
 	public Moon(Planet centerPlanet) {
 		super(centerPlanet, AsterConstant.MOON_CENTERX, AsterConstant.MOON_CENTERY, AsterConstant.MOON_RADIUS,
 				AsterConstant.MOON_ORBIT_RADIUS, AsterConstant.MOON_DEGREE, AsterConstant.MOON_SPEED);

@@ -5,24 +5,22 @@ import java.awt.Graphics;
 
 import constant.AsterConstant;
 
-/*
- * 地球类
- */
-public class Earth extends Planet{
+public class Venus extends Planet{
 	
-	public Earth(){}
+	public Venus(){}
 	
-	public Earth(Aster centerAster){
-		super(centerAster, AsterConstant.EARTH_CENTERX, AsterConstant.EARTH_CENTERY, AsterConstant.EARTH_RADIUS,
-				AsterConstant.EARTH_ORBIT_RADIUS, AsterConstant.EARTH_DEGREE, AsterConstant.EARTH_SPEED);
+	public Venus(Aster centerAster){
+		super(centerAster, AsterConstant.VENUS_CENTERX, AsterConstant.VENUS_CENTERY, AsterConstant.VENUS_RADIUS,
+				AsterConstant.VENUS_ORBIT_RADIUS, AsterConstant.VENUS_DEGREE, AsterConstant.VENUS_SPEED);
 	}
 
 	@Override
 	public void drawAster(Graphics g) {
+		// TODO Auto-generated method stub
 		Color originalColor = g.getColor();
 		int centerX = getCenterX();
 		int centerY = getCenterY();
-		g.setColor(new Color(100, 100, 255));
+		g.setColor(new Color(140, 25, 0));
 		g.fillOval(getX(), getY(), getRadius()*2, getRadius()*2);
 		setCenterXY(centerX, centerY);
 		g.setColor(originalColor);

@@ -5,16 +5,13 @@ import java.awt.Graphics;
 
 import constant.AsterConstant;
 
-/*
- * 地球类
- */
-public class Earth extends Planet{
+public class Mercury extends Planet{
 	
-	public Earth(){}
+	public Mercury(){}
 	
-	public Earth(Aster centerAster){
-		super(centerAster, AsterConstant.EARTH_CENTERX, AsterConstant.EARTH_CENTERY, AsterConstant.EARTH_RADIUS,
-				AsterConstant.EARTH_ORBIT_RADIUS, AsterConstant.EARTH_DEGREE, AsterConstant.EARTH_SPEED);
+	public Mercury(Aster centerAster){
+		super(centerAster, AsterConstant.MERCURY_CENTERX, AsterConstant.MERCURY_CENTERY, AsterConstant.MERCURY_RADIUS,
+				AsterConstant.MERCURY_ORBIT_RADIUS, AsterConstant.MERCURY_DEGREE, AsterConstant.MERCURY_SPEED);
 	}
 
 	@Override
@@ -22,7 +19,7 @@ public class Earth extends Planet{
 		Color originalColor = g.getColor();
 		int centerX = getCenterX();
 		int centerY = getCenterY();
-		g.setColor(new Color(100, 100, 255));
+		g.setColor(new Color(138, 43, 226));
 		g.fillOval(getX(), getY(), getRadius()*2, getRadius()*2);
 		setCenterXY(centerX, centerY);
 		g.setColor(originalColor);

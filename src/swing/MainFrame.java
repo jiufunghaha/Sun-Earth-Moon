@@ -11,8 +11,10 @@ import java.awt.event.WindowEvent;
 import javax.swing.Timer;
 
 import aster.Earth;
+import aster.Mercury;
 import aster.Moon;
 import aster.Sun;
+import aster.Venus;
 import constant.WindowConstant;
 
 @SuppressWarnings("serial")
@@ -21,6 +23,8 @@ public class MainFrame extends Frame implements ActionListener{
 	Sun sun = new Sun();
 	Earth earth = new Earth(sun);
 	Moon moon = new Moon(earth);
+	Mercury mercury = new Mercury(sun);
+	Venus venus = new Venus(sun);
 	
 	Timer timer = new Timer(WindowConstant.TIMER_DELAY, this);
 	
@@ -53,10 +57,24 @@ public class MainFrame extends Frame implements ActionListener{
 	public void paint(Graphics g) {
 		//画出太阳
 		sun.drawAster(g);
+		//画出水星
+		mercury.drawAster(g);
+		//画出金星
+		venus.drawAster(g);
 		//画出地球
 		earth.drawAster(g);
 		//画出月球
 		moon.drawAster(g);
+		//画出行星卫星轨道
+		//drawOrbit(g);
+	}
+	
+	//画出行星卫星轨道
+	public void drawOrbit(Graphics g){
+		mercury.drawOrbit(g);
+		venus.drawOrbit(g);
+		earth.drawOrbit(g);
+		moon.drawOrbit(g);
 	}
 
 	@Override
